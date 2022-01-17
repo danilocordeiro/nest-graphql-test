@@ -1,5 +1,4 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { IsOptional } from 'class-validator';
 
 @ObjectType()
 export class User {
@@ -14,4 +13,7 @@ export class User {
 
   @Field({ nullable: true })
   isSubscribed?: boolean;
+
+  @Field({ nullable: true })
+  password?: string;
 }
